@@ -1,0 +1,17 @@
+{
+  "name": "github-crawler",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "^2.6.0",
+    "curl": "^0.1.4",
+    "file": "^0.2.2",
+    "fss": "^1.0.0",
+    "json": "^9.0.6",
+    "jsonfile": "^4.0.0",
+    "util": "^0.10.3"
+  },
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
