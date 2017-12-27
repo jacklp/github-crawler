@@ -29,7 +29,7 @@ async.each(PHRASES,
         body = JSON.parse(body)
         if(!body.message) {
           for(item of body.items) {
-            jsonfile.writeFileSync(`logs/log_${phrase}.txt`, {
+            jsonfile.writeFileSync(`logs/log.txt`, {
               id: item.id,
               name: item.name,
               html_url: item.html_url,
@@ -37,8 +37,7 @@ async.each(PHRASES,
               updated_at: item.updated_at,
               open_issues_count: item.open_issues_count,
               forks_count: item.forks_count,
-              watchers: item.watchers,
-              score: item.score
+              watchers: item.watchers
             }, {flag: 'a'})
           }
         } else {
@@ -53,9 +52,9 @@ async.each(PHRASES,
 
 // TODO: UPGRADES
 // 1. LIMIT DATA BY DATE RANGE
-// 2. SEARCH BY SOLIDITY files
-//3. SEARCH BY COMMIT TEXT
-//4.  GET ADDITIONAL DATA
+// 2. SEARCH BY SOLIDITY FILES
+// 3. SEARCH BY COMMIT TEXT
+// 4.  GET ADDITIONAL DATA
 // # Solidity (or NEO etc) files
 // # issues
 // # commits
